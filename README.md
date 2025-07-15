@@ -14,3 +14,14 @@ the file under `folder` is lost.
 
 The filtering logic appears to be applied to the entire relative path name
 `folder\${file.name}.txt`, and the file separator is treated as an escape.
+
+Clone this repo and build with maven on Windows. Expected result is that this file exists:
+
+	target/classes/folder/myFileName.txt
+
+but instead, you get
+
+	target/classes/folder${file.name}.txt
+
+Could probably also reproduce on Linux/Max by changing the plugin configuration to
+use `escapeString=/`.
