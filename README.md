@@ -25,3 +25,5 @@ but instead, you get
 
 Could probably also reproduce on Linux/Max by changing the plugin configuration to
 use `escapeString=/`.
+
+This has been reported here: https://github.com/apache/maven-filtering/issues/289
